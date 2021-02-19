@@ -1,0 +1,21 @@
+{
+  "name": "FastMigrateAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Team #16",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "request": "^2.88.2",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
