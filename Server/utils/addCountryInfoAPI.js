@@ -4,9 +4,9 @@ getCountryHealth = (country_name) => {
     return new Promise((resolve, reject) => {
         let url = 'https://www.numbeo.com/api/';
         let key = 'x9ey41xq1xqezv';
-        let country_api = axios.get(url+"/api/country_indices?api_key="+key+"&country="+country_name)
+        let country_api = axios.get(url+"country_indices?api_key="+key+"&country="+country_name)
                             .then(res => { 
-                                return res.data.results[0];
+                                return res.data[0];
                             })
                             .catch( err => {
                                 console.log(err);
@@ -24,9 +24,9 @@ getCountryCrime = (country_name) => {
     return new Promise((resolve, reject) => {
         let url = 'https://www.numbeo.com/api/';
         let key = 'x9ey41xq1xqezv';
-        let country_api = axios.get(url+"/api/country_indices?api_key="+key+"&country="+country_name)
+        let country_api = axios.get(url+"country_indices?api_key="+key+"&country="+country_name)
                             .then(res => { 
-                                return res.data.results[1];
+                                return res.data[1];
                             })
                             .catch( err => {
                                 console.log(err);
@@ -44,9 +44,9 @@ getCountryCost = (country_name) => {
     return new Promise((resolve, reject) => {
         let url = 'https://www.numbeo.com/api/';
         let key = 'x9ey41xq1xqezv';
-        let country_api = axios.get(url+"/api/country_indices?api_key="+key+"&country="+country_name)
+        let country_api = axios.get(url+"country_indices?api_key="+key+"&country="+country_name)
                             .then(res => { 
-                                return res.data.results[4];
+                                return res.data[4];
                             })
                             .catch( err => {
                                 console.log(err);
@@ -64,9 +64,9 @@ getCountryQuality = (country_name) => {
     return new Promise((resolve, reject) => {
         let url = 'https://www.numbeo.com/api/';
         let key = 'x9ey41xq1xqezv';
-        let country_api = axios.get(url+"/api/country_indices?api_key="+key+"&country="+country_name)
+        let country_api = axios.get(url+"country_indices?api_key="+key+"&country="+country_name)
                             .then(res => { 
-                                return res.data.results[7];                                
+                                return res.data[7];                                
                             })
                             .catch( err => {
                                 console.log(err);
