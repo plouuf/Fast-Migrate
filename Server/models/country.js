@@ -11,14 +11,14 @@ class Country {
     this.name = name;
   }
 
-  addCountryInfo(crime_index, quality_of_life, health_care, cost_of_living, Gdp, happiness_score, employment_rate) {
+  addCountryInfo(happiness_score, Gdp, unemployment_rate, crime_index, quality_of_life, health_care, cost_of_living) {
+    this.happiness_score = happiness_score;
+    this.Gdp = Gdp;
+    this.unemployment_rate = unemployment_rate;
     this.crime_index = crime_index;
     this.quality_of_life = quality_of_life;
     this.health_care = health_care;
     this.cost_of_living = cost_of_living;
-    this.Gdp = Gdp;
-    this.happiness_score = happiness_score;
-    this.employment_rate = employment_rate;
   }
 
   async save(db) {
@@ -61,3 +61,5 @@ class Country {
 		});
 	};
 }
+
+module.exports = Country
