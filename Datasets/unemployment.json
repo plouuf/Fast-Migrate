@@ -1,0 +1,1047 @@
+[
+  {
+    "country": "Burkina Faso",
+    "unemploymentRate": 77,
+    "pop2021": "21497.0960"
+  },
+  {
+    "country": "Syria",
+    "unemploymentRate": 50,
+    "pop2021": "18275.7020"
+  },
+  {
+    "country": "Senegal",
+    "unemploymentRate": 48,
+    "pop2021": "17196.3010"
+  },
+  {
+    "country": "Haiti",
+    "unemploymentRate": "40.6000",
+    "pop2021": "11541.6850"
+  },
+  {
+    "country": "Djibouti",
+    "unemploymentRate": 40,
+    "pop2021": "1002.1870"
+  },
+  {
+    "country": "Kenya",
+    "unemploymentRate": 40,
+    "pop2021": "54985.6980"
+  },
+  {
+    "country": "Marshall Islands",
+    "unemploymentRate": 36,
+    "pop2021": "59.6100"
+  },
+  {
+    "country": "Republic of the Congo",
+    "unemploymentRate": 36,
+    "pop2021": "5657.0130"
+  },
+  {
+    "country": "Namibia",
+    "unemploymentRate": 34,
+    "pop2021": "2587.3440"
+  },
+  {
+    "country": "Kiribati",
+    "unemploymentRate": "30.6000",
+    "pop2021": "121.3920"
+  },
+  {
+    "country": "Libya",
+    "unemploymentRate": 30,
+    "pop2021": "6958.5320"
+  },
+  {
+    "country": "American Samoa",
+    "unemploymentRate": "29.8000",
+    "pop2021": "55.1000"
+  },
+  {
+    "country": "Lesotho",
+    "unemploymentRate": "28.1000",
+    "pop2021": "2159.0790"
+  },
+  {
+    "country": "Swaziland",
+    "unemploymentRate": 28,
+    "pop2021": "1172.3620"
+  },
+  {
+    "country": "Gabon",
+    "unemploymentRate": 28,
+    "pop2021": "2278.8250"
+  },
+  {
+    "country": "South Africa",
+    "unemploymentRate": "27.6000",
+    "pop2021": "60041.9940"
+  },
+  {
+    "country": "Yemen",
+    "unemploymentRate": 27,
+    "pop2021": "30490.6400"
+  },
+  {
+    "country": "Venezuela",
+    "unemploymentRate": "26.4000",
+    "pop2021": "28704.9540"
+  },
+  {
+    "country": "North Korea",
+    "unemploymentRate": "25.6000",
+    "pop2021": "25887.0410"
+  },
+  {
+    "country": "Mozambique",
+    "unemploymentRate": "24.5000",
+    "pop2021": "32163.0470"
+  },
+  {
+    "country": "Grenada",
+    "unemploymentRate": 24,
+    "pop2021": "113.0210"
+  },
+  {
+    "country": "Afghanistan",
+    "unemploymentRate": "23.9000",
+    "pop2021": "39835.4280"
+  },
+  {
+    "country": "Macedonia",
+    "unemploymentRate": "23.4000",
+    "pop2021": "2082.6580"
+  },
+  {
+    "country": "Nauru",
+    "unemploymentRate": 23,
+    "pop2021": "10.8760"
+  },
+  {
+    "country": "Dominica",
+    "unemploymentRate": 23,
+    "pop2021": "72.1670"
+  },
+  {
+    "country": "Greece",
+    "unemploymentRate": "22.3000",
+    "pop2021": "10370.7440"
+  },
+  {
+    "country": "French Polynesia",
+    "unemploymentRate": "21.8000",
+    "pop2021": "282.5300"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "unemploymentRate": "20.5000",
+    "pop2021": "3263.4660"
+  },
+  {
+    "country": "Malawi",
+    "unemploymentRate": "20.4000",
+    "pop2021": "19647.6840"
+  },
+  {
+    "country": "Saint Lucia",
+    "unemploymentRate": 20,
+    "pop2021": "184.4000"
+  },
+  {
+    "country": "Botswana",
+    "unemploymentRate": 20,
+    "pop2021": "2397.2410"
+  },
+  {
+    "country": "Sudan",
+    "unemploymentRate": "19.6000",
+    "pop2021": "44909.3530"
+  },
+  {
+    "country": "Armenia",
+    "unemploymentRate": "18.9000",
+    "pop2021": "2968.1270"
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "unemploymentRate": "18.8000",
+    "pop2021": "111.2630"
+  },
+  {
+    "country": "Jordan",
+    "unemploymentRate": "18.5000",
+    "pop2021": "10269.0210"
+  },
+  {
+    "country": "Ethiopia",
+    "unemploymentRate": "17.5000",
+    "pop2021": "117876.2270"
+  },
+  {
+    "country": "Spain",
+    "unemploymentRate": "17.1000",
+    "pop2021": "46745.2160"
+  },
+  {
+    "country": "Micronesia",
+    "unemploymentRate": "16.2000",
+    "pop2021": "116.2540"
+  },
+  {
+    "country": "Montenegro",
+    "unemploymentRate": "16.1000",
+    "pop2021": "628.0530"
+  },
+  {
+    "country": "Serbia",
+    "unemploymentRate": 16,
+    "pop2021": "8697.5500"
+  },
+  {
+    "country": "Iraq",
+    "unemploymentRate": 16,
+    "pop2021": "41179.3500"
+  },
+  {
+    "country": "Tunisia",
+    "unemploymentRate": "15.9000",
+    "pop2021": "11935.7660"
+  },
+  {
+    "country": "Zambia",
+    "unemploymentRate": 15,
+    "pop2021": "18920.6510"
+  },
+  {
+    "country": "New Caledonia",
+    "unemploymentRate": "14.7000",
+    "pop2021": "288.2180"
+  },
+  {
+    "country": "Albania",
+    "unemploymentRate": 14,
+    "pop2021": "2872.9330"
+  },
+  {
+    "country": "Nigeria",
+    "unemploymentRate": "13.4000",
+    "pop2021": "211400.7080"
+  },
+  {
+    "country": "Cook Islands",
+    "unemploymentRate": "13.1000",
+    "pop2021": "17.5650"
+  },
+  {
+    "country": "Curacao",
+    "unemploymentRate": 13,
+    "pop2021": "164.7980"
+  },
+  {
+    "country": "Croatia",
+    "unemploymentRate": "12.4000",
+    "pop2021": "4081.6510"
+  },
+  {
+    "country": "Iran",
+    "unemploymentRate": "12.4000",
+    "pop2021": "85028.7590"
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "unemploymentRate": "12.2000",
+    "pop2021": "223.3680"
+  },
+  {
+    "country": "Niue",
+    "unemploymentRate": 12,
+    "pop2021": "1.6190"
+  },
+  {
+    "country": "Sint Maarten",
+    "unemploymentRate": 12,
+    "pop2021": "43.4120"
+  },
+  {
+    "country": "Ghana",
+    "unemploymentRate": "11.9000",
+    "pop2021": "31732.1290"
+  },
+  {
+    "country": "Egypt",
+    "unemploymentRate": "11.9000",
+    "pop2021": "104258.3270"
+  },
+  {
+    "country": "Cyprus",
+    "unemploymentRate": "11.8000",
+    "pop2021": "1215.5840"
+  },
+  {
+    "country": "Brazil",
+    "unemploymentRate": "11.8000",
+    "pop2021": "213993.4370"
+  },
+  {
+    "country": "Mauritania",
+    "unemploymentRate": "11.7000",
+    "pop2021": "4775.1190"
+  },
+  {
+    "country": "Algeria",
+    "unemploymentRate": "11.7000",
+    "pop2021": "44616.6240"
+  },
+  {
+    "country": "Puerto Rico",
+    "unemploymentRate": "11.5000",
+    "pop2021": "2828.2550"
+  },
+  {
+    "country": "Georgia",
+    "unemploymentRate": "11.5000",
+    "pop2021": "3979.7650"
+  },
+  {
+    "country": "Zimbabwe",
+    "unemploymentRate": "11.3000",
+    "pop2021": "15092.1710"
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "unemploymentRate": "11.2000",
+    "pop2021": "57.9170"
+  },
+  {
+    "country": "Turkey",
+    "unemploymentRate": "11.2000",
+    "pop2021": "85042.7380"
+  },
+  {
+    "country": "Guyana",
+    "unemploymentRate": "11.1000",
+    "pop2021": "790.3260"
+  },
+  {
+    "country": "Italy",
+    "unemploymentRate": "11.1000",
+    "pop2021": "60367.4770"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "unemploymentRate": 11,
+    "pop2021": "98.7310"
+  },
+  {
+    "country": "Turkmenistan",
+    "unemploymentRate": 11,
+    "pop2021": "6117.9240"
+  },
+  {
+    "country": "Barbados",
+    "unemploymentRate": "10.5000",
+    "pop2021": "287.7110"
+  },
+  {
+    "country": "Colombia",
+    "unemploymentRate": "10.5000",
+    "pop2021": "51265.8440"
+  },
+  {
+    "country": "United States Virgin Islands",
+    "unemploymentRate": "10.4000",
+    "pop2021": "104.2260"
+  },
+  {
+    "country": "Jamaica",
+    "unemploymentRate": "10.4000",
+    "pop2021": "2973.4630"
+  },
+  {
+    "country": "Tanzania",
+    "unemploymentRate": "10.3000",
+    "pop2021": "61498.4370"
+  },
+  {
+    "country": "Belize",
+    "unemploymentRate": "10.1000",
+    "pop2021": "404.9140"
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "unemploymentRate": 10,
+    "pop2021": "39.2310"
+  },
+  {
+    "country": "Bahamas",
+    "unemploymentRate": 10,
+    "pop2021": "396.9130"
+  },
+  {
+    "country": "Morocco",
+    "unemploymentRate": 10,
+    "pop2021": "37344.7950"
+  },
+  {
+    "country": "Portugal",
+    "unemploymentRate": "9.7000",
+    "pop2021": "10167.9250"
+  },
+  {
+    "country": "Ukraine",
+    "unemploymentRate": "9.5000",
+    "pop2021": "43466.8190"
+  },
+  {
+    "country": "France",
+    "unemploymentRate": "9.5000",
+    "pop2021": "65426.1790"
+  },
+  {
+    "country": "Ivory Coast",
+    "unemploymentRate": "9.4000",
+    "pop2021": "27053.6290"
+  },
+  {
+    "country": "Uganda",
+    "unemploymentRate": "9.4000",
+    "pop2021": "47123.5310"
+  },
+  {
+    "country": "Greenland",
+    "unemploymentRate": "9.1000",
+    "pop2021": "56.8770"
+  },
+  {
+    "country": "Suriname",
+    "unemploymentRate": "9.1000",
+    "pop2021": "591.8000"
+  },
+  {
+    "country": "Sierra Leone",
+    "unemploymentRate": "9.1000",
+    "pop2021": "8141.3430"
+  },
+  {
+    "country": "Cape Verde",
+    "unemploymentRate": 9,
+    "pop2021": "561.8980"
+  },
+  {
+    "country": "Latvia",
+    "unemploymentRate": 9,
+    "pop2021": "1866.9420"
+  },
+  {
+    "country": "Wallis and Futuna",
+    "unemploymentRate": "8.8000",
+    "pop2021": "11.0940"
+  },
+  {
+    "country": "India",
+    "unemploymentRate": "8.8000",
+    "pop2021": "1393409.0380"
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "unemploymentRate": "8.7000",
+    "pop2021": "5.7660"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "unemploymentRate": "8.6000",
+    "pop2021": "1449.8960"
+  },
+  {
+    "country": "Eritrea",
+    "unemploymentRate": "8.6000",
+    "pop2021": "3601.4670"
+  },
+  {
+    "country": "Finland",
+    "unemploymentRate": "8.6000",
+    "pop2021": "5548.3600"
+  },
+  {
+    "country": "Costa Rica",
+    "unemploymentRate": "8.1000",
+    "pop2021": "5139.0520"
+  },
+  {
+    "country": "Slovakia",
+    "unemploymentRate": "8.1000",
+    "pop2021": "5460.7210"
+  },
+  {
+    "country": "Mali",
+    "unemploymentRate": "8.1000",
+    "pop2021": "20855.7350"
+  },
+  {
+    "country": "Argentina",
+    "unemploymentRate": "8.1000",
+    "pop2021": "45605.8260"
+  },
+  {
+    "country": "Anguilla",
+    "unemploymentRate": 8,
+    "pop2021": "15.1170"
+  },
+  {
+    "country": "San Marino",
+    "unemploymentRate": 8,
+    "pop2021": "34.0170"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "unemploymentRate": "7.4000",
+    "pop2021": "6628.3560"
+  },
+  {
+    "country": "Mongolia",
+    "unemploymentRate": "7.3000",
+    "pop2021": "3329.2890"
+  },
+  {
+    "country": "Uruguay",
+    "unemploymentRate": "7.3000",
+    "pop2021": "3485.1510"
+  },
+  {
+    "country": "Belgium",
+    "unemploymentRate": "7.3000",
+    "pop2021": "11632.3260"
+  },
+  {
+    "country": "Bermuda",
+    "unemploymentRate": 7,
+    "pop2021": "62.0900"
+  },
+  {
+    "country": "Lithuania",
+    "unemploymentRate": 7,
+    "pop2021": "2689.8620"
+  },
+  {
+    "country": "El Salvador",
+    "unemploymentRate": 7,
+    "pop2021": "6518.4990"
+  },
+  {
+    "country": "Chile",
+    "unemploymentRate": 7,
+    "pop2021": "19212.3610"
+  },
+  {
+    "country": "Aruba",
+    "unemploymentRate": "6.9000",
+    "pop2021": "107.2040"
+  },
+  {
+    "country": "Brunei",
+    "unemploymentRate": "6.9000",
+    "pop2021": "441.5320"
+  },
+  {
+    "country": "Mauritius",
+    "unemploymentRate": "6.9000",
+    "pop2021": "1273.4330"
+  },
+  {
+    "country": "Central African Republic",
+    "unemploymentRate": "6.9000",
+    "pop2021": "4919.9810"
+  },
+  {
+    "country": "Togo",
+    "unemploymentRate": "6.9000",
+    "pop2021": "8478.2500"
+  },
+  {
+    "country": "Peru",
+    "unemploymentRate": "6.7000",
+    "pop2021": "33359.4180"
+  },
+  {
+    "country": "Slovenia",
+    "unemploymentRate": "6.6000",
+    "pop2021": "2078.7240"
+  },
+  {
+    "country": "Sweden",
+    "unemploymentRate": "6.6000",
+    "pop2021": "10160.1690"
+  },
+  {
+    "country": "Angola",
+    "unemploymentRate": "6.6000",
+    "pop2021": "33933.6100"
+  },
+  {
+    "country": "Comoros",
+    "unemploymentRate": "6.5000",
+    "pop2021": "888.4510"
+  },
+  {
+    "country": "Nicaragua",
+    "unemploymentRate": "6.5000",
+    "pop2021": "6702.3850"
+  },
+  {
+    "country": "Paraguay",
+    "unemploymentRate": "6.5000",
+    "pop2021": "7219.6380"
+  },
+  {
+    "country": "Canada",
+    "unemploymentRate": "6.5000",
+    "pop2021": "38067.9030"
+  },
+  {
+    "country": "Ireland",
+    "unemploymentRate": "6.4000",
+    "pop2021": "4982.9070"
+  },
+  {
+    "country": "Bulgaria",
+    "unemploymentRate": "6.2000",
+    "pop2021": "6896.6630"
+  },
+  {
+    "country": "Luxembourg",
+    "unemploymentRate": "6.1000",
+    "pop2021": "634.8140"
+  },
+  {
+    "country": "Azerbaijan",
+    "unemploymentRate": 6,
+    "pop2021": "10223.3420"
+  },
+  {
+    "country": "Pakistan",
+    "unemploymentRate": 6,
+    "pop2021": "225199.9370"
+  },
+  {
+    "country": "Estonia",
+    "unemploymentRate": "5.9000",
+    "pop2021": "1325.1850"
+  },
+  {
+    "country": "Honduras",
+    "unemploymentRate": "5.9000",
+    "pop2021": "10062.9910"
+  },
+  {
+    "country": "Denmark",
+    "unemploymentRate": "5.8000",
+    "pop2021": "5813.2980"
+  },
+  {
+    "country": "Saudi Arabia",
+    "unemploymentRate": "5.8000",
+    "pop2021": "35340.6830"
+  },
+  {
+    "country": "Philippines",
+    "unemploymentRate": "5.7000",
+    "pop2021": "111046.9130"
+  },
+  {
+    "country": "Montserrat",
+    "unemploymentRate": "5.6000",
+    "pop2021": "4.9770"
+  },
+  {
+    "country": "Australia",
+    "unemploymentRate": "5.6000",
+    "pop2021": "25788.2150"
+  },
+  {
+    "country": "Indonesia",
+    "unemploymentRate": "5.6000",
+    "pop2021": "276361.7830"
+  },
+  {
+    "country": "Fiji",
+    "unemploymentRate": "5.5000",
+    "pop2021": "902.9060"
+  },
+  {
+    "country": "Panama",
+    "unemploymentRate": "5.5000",
+    "pop2021": "4381.5790"
+  },
+  {
+    "country": "Austria",
+    "unemploymentRate": "5.5000",
+    "pop2021": "9043.0700"
+  },
+  {
+    "country": "Dominican Republic",
+    "unemploymentRate": "5.5000",
+    "pop2021": "10953.7030"
+  },
+  {
+    "country": "Russia",
+    "unemploymentRate": "5.5000",
+    "pop2021": "145912.0250"
+  },
+  {
+    "country": "Romania",
+    "unemploymentRate": "5.3000",
+    "pop2021": "19127.7740"
+  },
+  {
+    "country": "Kazakhstan",
+    "unemploymentRate": 5,
+    "pop2021": "18994.9620"
+  },
+  {
+    "country": "New Zealand",
+    "unemploymentRate": "4.9000",
+    "pop2021": "4860.6430"
+  },
+  {
+    "country": "Uzbekistan",
+    "unemploymentRate": "4.9000",
+    "pop2021": "33935.7630"
+  },
+  {
+    "country": "Netherlands",
+    "unemploymentRate": "4.8000",
+    "pop2021": "17173.0990"
+  },
+  {
+    "country": "Poland",
+    "unemploymentRate": "4.8000",
+    "pop2021": "37797.0050"
+  },
+  {
+    "country": "Ecuador",
+    "unemploymentRate": "4.6000",
+    "pop2021": "17888.4750"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "unemploymentRate": "4.5000",
+    "pop2021": "53.5440"
+  },
+  {
+    "country": "Guam",
+    "unemploymentRate": "4.5000",
+    "pop2021": "170.1790"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "unemploymentRate": "4.5000",
+    "pop2021": "1403.3750"
+  },
+  {
+    "country": "Sri Lanka",
+    "unemploymentRate": "4.5000",
+    "pop2021": "21497.3100"
+  },
+  {
+    "country": "Malta",
+    "unemploymentRate": "4.4000",
+    "pop2021": "442.7840"
+  },
+  {
+    "country": "Timor-Leste",
+    "unemploymentRate": "4.4000",
+    "pop2021": "1343.8730"
+  },
+  {
+    "country": "Hungary",
+    "unemploymentRate": "4.4000",
+    "pop2021": "9634.1640"
+  },
+  {
+    "country": "United Kingdom",
+    "unemploymentRate": "4.4000",
+    "pop2021": "68207.1160"
+  },
+  {
+    "country": "United States",
+    "unemploymentRate": "4.4000",
+    "pop2021": "332915.0730"
+  },
+  {
+    "country": "Israel",
+    "unemploymentRate": "4.3000",
+    "pop2021": "8789.7740"
+  },
+  {
+    "country": "Cameroon",
+    "unemploymentRate": "4.3000",
+    "pop2021": "27224.2650"
+  },
+  {
+    "country": "Seychelles",
+    "unemploymentRate": "4.1000",
+    "pop2021": "98.9080"
+  },
+  {
+    "country": "Moldova",
+    "unemploymentRate": "4.1000",
+    "pop2021": "4024.0190"
+  },
+  {
+    "country": "Cayman Islands",
+    "unemploymentRate": 4,
+    "pop2021": "66.4970"
+  },
+  {
+    "country": "Norway",
+    "unemploymentRate": 4,
+    "pop2021": "5465.6300"
+  },
+  {
+    "country": "Bolivia",
+    "unemploymentRate": 4,
+    "pop2021": "11832.9400"
+  },
+  {
+    "country": "Myanmar",
+    "unemploymentRate": 4,
+    "pop2021": "54806.0120"
+  },
+  {
+    "country": "Bangladesh",
+    "unemploymentRate": 4,
+    "pop2021": "166303.4980"
+  },
+  {
+    "country": "China",
+    "unemploymentRate": "3.9000",
+    "pop2021": "1444216.1070"
+  },
+  {
+    "country": "Bahrain",
+    "unemploymentRate": "3.8000",
+    "pop2021": "1748.2960"
+  },
+  {
+    "country": "Taiwan",
+    "unemploymentRate": "3.8000",
+    "pop2021": "23855.0100"
+  },
+  {
+    "country": "Germany",
+    "unemploymentRate": "3.8000",
+    "pop2021": "83900.4730"
+  },
+  {
+    "country": "Andorra",
+    "unemploymentRate": "3.7000",
+    "pop2021": "77.3550"
+  },
+  {
+    "country": "South Korea",
+    "unemploymentRate": "3.7000",
+    "pop2021": "51305.1860"
+  },
+  {
+    "country": "Mexico",
+    "unemploymentRate": "3.6000",
+    "pop2021": "130262.2160"
+  },
+  {
+    "country": "Malaysia",
+    "unemploymentRate": "3.4000",
+    "pop2021": "32776.1940"
+  },
+  {
+    "country": "Bhutan",
+    "unemploymentRate": "3.2000",
+    "pop2021": "779.8980"
+  },
+  {
+    "country": "Hong Kong",
+    "unemploymentRate": "3.1000",
+    "pop2021": "7552.8100"
+  },
+  {
+    "country": "Switzerland",
+    "unemploymentRate": 3,
+    "pop2021": "8715.4940"
+  },
+  {
+    "country": "Nepal",
+    "unemploymentRate": 3,
+    "pop2021": "29674.9200"
+  },
+  {
+    "country": "British Virgin Islands",
+    "unemploymentRate": "2.9000",
+    "pop2021": "30.4210"
+  },
+  {
+    "country": "Maldives",
+    "unemploymentRate": "2.9000",
+    "pop2021": "543.6170"
+  },
+  {
+    "country": "Japan",
+    "unemploymentRate": "2.9000",
+    "pop2021": "126050.8040"
+  },
+  {
+    "country": "Iceland",
+    "unemploymentRate": "2.8000",
+    "pop2021": "343.3530"
+  },
+  {
+    "country": "Liberia",
+    "unemploymentRate": "2.8000",
+    "pop2021": "5180.2030"
+  },
+  {
+    "country": "Czech Republic",
+    "unemploymentRate": "2.8000",
+    "pop2021": "10724.5550"
+  },
+  {
+    "country": "Guinea",
+    "unemploymentRate": "2.8000",
+    "pop2021": "13497.2440"
+  },
+  {
+    "country": "Rwanda",
+    "unemploymentRate": "2.7000",
+    "pop2021": "13276.5130"
+  },
+  {
+    "country": "Niger",
+    "unemploymentRate": "2.6000",
+    "pop2021": "25130.8170"
+  },
+  {
+    "country": "Papua New Guinea",
+    "unemploymentRate": "2.5000",
+    "pop2021": "9119.0100"
+  },
+  {
+    "country": "Liechtenstein",
+    "unemploymentRate": "2.4000",
+    "pop2021": "38.2500"
+  },
+  {
+    "country": "Tajikistan",
+    "unemploymentRate": "2.4000",
+    "pop2021": "9749.6270"
+  },
+  {
+    "country": "Guatemala",
+    "unemploymentRate": "2.3000",
+    "pop2021": "18249.8600"
+  },
+  {
+    "country": "Faroe Islands",
+    "unemploymentRate": "2.2000",
+    "pop2021": "49.0490"
+  },
+  {
+    "country": "Singapore",
+    "unemploymentRate": "2.2000",
+    "pop2021": "5896.6860"
+  },
+  {
+    "country": "Cuba",
+    "unemploymentRate": "2.2000",
+    "pop2021": "11317.5050"
+  },
+  {
+    "country": "Vietnam",
+    "unemploymentRate": "2.2000",
+    "pop2021": "98168.8330"
+  },
+  {
+    "country": "Kuwait",
+    "unemploymentRate": "2.1000",
+    "pop2021": "4328.5500"
+  },
+  {
+    "country": "Madagascar",
+    "unemploymentRate": "2.1000",
+    "pop2021": "28427.3280"
+  },
+  {
+    "country": "Monaco",
+    "unemploymentRate": 2,
+    "pop2021": "39.5110"
+  },
+  {
+    "country": "Macau",
+    "unemploymentRate": 2,
+    "pop2021": "658.3940"
+  },
+  {
+    "country": "Palau",
+    "unemploymentRate": "1.7000",
+    "pop2021": "18.1690"
+  },
+  {
+    "country": "Vanuatu",
+    "unemploymentRate": "1.7000",
+    "pop2021": "314.4640"
+  },
+  {
+    "country": "United Arab Emirates",
+    "unemploymentRate": "1.6000",
+    "pop2021": "9991.0890"
+  },
+  {
+    "country": "Laos",
+    "unemploymentRate": "1.5000",
+    "pop2021": "7379.3580"
+  },
+  {
+    "country": "Isle of Man",
+    "unemploymentRate": "1.1000",
+    "pop2021": "85.4100"
+  },
+  {
+    "country": "Tonga",
+    "unemploymentRate": "1.1000",
+    "pop2021": "106.7600"
+  },
+  {
+    "country": "Falkland Islands",
+    "unemploymentRate": 1,
+    "pop2021": "3.5330"
+  },
+  {
+    "country": "Gibraltar",
+    "unemploymentRate": 1,
+    "pop2021": "33.6980"
+  },
+  {
+    "country": "Belarus",
+    "unemploymentRate": 1,
+    "pop2021": "9442.8620"
+  },
+  {
+    "country": "Benin",
+    "unemploymentRate": 1,
+    "pop2021": "12451.0400"
+  },
+  {
+    "country": "Thailand",
+    "unemploymentRate": "0.7000",
+    "pop2021": "69950.8500"
+  },
+  {
+    "country": "Qatar",
+    "unemploymentRate": "0.6000",
+    "pop2021": "2930.5280"
+  },
+  {
+    "country": "Cambodia",
+    "unemploymentRate": "0.3000",
+    "pop2021": "16946.4380"
+  }
+]
