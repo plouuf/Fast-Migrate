@@ -14,7 +14,7 @@ class Country {
   addCountryInfo(happiness_score, Gdp, crime_index, quality_of_life, health_care, cost_of_living) {
     this.happiness_score = happiness_score;
     this.Gdp = Gdp;
-    // this.unemployment_rate = unemployment_rate;
+    this.unemployment_rate = unemployment_rate;
     this.crime_index = crime_index;
     this.quality_of_life = quality_of_life;
     this.health_care = health_care;
@@ -105,6 +105,7 @@ class Country {
 
 				resolve(items);
 				console.log(items.length+" countries sent.");
+      });
     });
 	};
 }
