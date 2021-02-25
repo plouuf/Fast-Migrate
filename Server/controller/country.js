@@ -1,27 +1,93 @@
 const { getHappiness } = require("../utils/addCountryHappiness");
 const { getGdp } = require("../utils/addCountryGDP");
 const { getCountryInfo } = require("../utils/addCountryInfoAPI");
+const { getUnemployment } = require('../utils/addCountryUnemployment');
 const Country = require("../models/country");
 
+const create = async (req, res) => {
+    const new_country = new Country(req.body.name);
+    let happiness = getHappiness(new_country.name);
+    let gdp = getGdp(new_country.name);
+    let unemployment = getUnemployment(new_country.name)
+    let crime_index;
+    let quality_of_life;
+    let health_care_index;
+    let cpi_index;
+    await getCountryInfo(new_country.name).then(data => {
+        crime_index = data[0];
+        quality_of_life = data[1];
+        health_care_index = data[2];
+        cpi_index = data[3];
+    })
+    new_country.addCountryInfo(happiness, gdp, unemployment, crime_index, quality_of_life, health_care_index, cpi_index)
+    if(new_country.isValid()){
+        let db = req.db;
+        try{
+            let msg = await new_country.save(db);
+            res.send(msg)
+        }catch(err){
+            res.send('There was an error while adding the country. (err:'+err+')');
+            throw new Error(err);
+        }
+    }
+    else{
+        res.send('The country data you entered is invalid');
+    }
+}
 
+const getOne = async (req, res) => {
+    const country_name = req.params.name;
+    let db = req.db;
+    try{
+        let obj = await Country.getCountryByName(db, country_name);
+        res.send(obj);
+    }catch(err){
+        res.send('There was an error while retrieving the country information. (err:'+err+')');
+        throw new Error(err);
+    }
+}
 
-let c = new Country('Canada');
+const updateOne = async (req, res) => {
+    const country = req.body;
+    const name = req.params.name;
+    let db = req.db;
+    try{
+        let msg = await Country.update(db, name, country.happiness_score, country.Gdp, country.unemployment_rate, country.crime_index, country.quality_of_life, country.health_care, country.cost_of_living);
+        res.send(msg);
+    }catch(err){
+        res.send('There was an error while updating the country information. (err:'+err+')');
+        throw new Error(err);
+    }
+}
 
-//returns the happiness score for canada
-let happiness = getHappiness('Canada');
-console.log(happiness);
+const deleteOne = async (req, res) => {
+    const name = req.params.name;
+    let db = req.db;
+    try{
+        let msg = await Country.delete(db, name);
+        res.send(msg);
+    }catch(err){
+        res.send('There was an error while deleting the country information. (err:'+err+')');
+        throw new Error(err);
+    }
+}
 
-//returns gdp for canada
-let gdp = getGdp('Canada');
-console.log(gdp);
+const all = async (req, res) => {
+    let db = req.db;
+    try{
+        let obj = await Country.getCountries(db)
+        console.log(obj.length + 'book(s) were returned');
+        res.send(obj);
+    }catch(err){
+        res.send('There was an error while retrieving all countries informations. (err:'+err+')');
+        throw new Error(err);
+    }
+}
 
-//returns a promise of an array [crime_index, quality_of_life_index, health_care_index, cpi_index(cost of living)] 
-//or null for some field if not found in the api
-//need to await this function
-getCountryInfo('Canada').then(data => { 
-  console.log(data);
-}).catch(err => { 
-  console.log(err);
-});
-
-
+module.exports = {
+    create,
+    getOne,
+    updateOne,
+    deleteOne,
+    all
+}
