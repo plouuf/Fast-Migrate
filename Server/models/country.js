@@ -1,3 +1,6 @@
+const Validator = require('validatorjs');
+
+
 async function _get_country_collection(db) {
   try {
     return await db.collection('countries');
@@ -19,6 +22,16 @@ class Country {
     this.quality_of_life = quality_of_life;
     this.health_care = health_care;
     this.cost_of_living = cost_of_living;
+  }
+
+  isValid() { 
+    const rules = {
+      name: 'required|string',
+      happiness_score: 'required|digits_between:0,10'
+    }
+
+    const validation = new Validator(this, rules);
+    return validation.passes();
   }
 
   async save(db) {
