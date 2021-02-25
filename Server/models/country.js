@@ -55,10 +55,10 @@ class Country {
 			collection.updateOne({'name': name}, new_vals, (err, obj) => {
         if (err) throw err;
         if (obj.modifiedCount > 0) {
-          console.log("1 document updated.");
-          resolve("Country correctly updated!");
+          console.log('1 document updated.');
+          resolve('Country correctly updated!');
         } else {
-          console.log("document not updated.");
+          console.log('document not updated.');
           reject(`The Country with name ${name} is not valid!`);
         } 
 			});
@@ -87,13 +87,13 @@ class Country {
     var name_get = name;
 		return new Promise(async function (resolve, reject){
 			let collection = await _get_country_collection(db);
-      collection.find({"name": name}).toArray((err, items) => {
+      collection.find({'name': name}).toArray((err, items) => {
 				if (err) throw err;
         if (items.length > 0) {
 					console.log(`${items.length} item(s) sent.`);
           resolve(items);
         } else {
-          console.log("Country was not found");
+          console.log('Country was not found');
           reject(`There is no country with name: ${name_get}.`);
         }
 			});
@@ -109,7 +109,7 @@ class Country {
 					console.log(`${items.length} item(s) sent.`);
           resolve(items);
         } else {
-          reject("Database is empty!");
+          reject('Database is empty!');
         }
       });
     });
