@@ -14,7 +14,7 @@ class Country {
     this.name = name;
   }
   
-  addCountryInfo(happiness_score, Gdp, unemployment_rate,crime_index, quality_of_life, health_care, cost_of_living) {
+  addCountryInfo(happiness_score, Gdp, unemployment_rate, crime_index, quality_of_life, health_care, cost_of_living) {
     this.happiness_score = happiness_score;
     this.Gdp = Gdp;
     this.unemployment_rate = unemployment_rate;

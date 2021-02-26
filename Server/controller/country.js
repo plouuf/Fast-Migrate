@@ -1,14 +1,14 @@
-const { getHappiness } = require("../utils/addCountryHappiness");
-const { getGdp } = require("../utils/addCountryGDP");
-const { getCountryInfo } = require("../utils/addCountryInfoAPI");
+const { getHappiness } = require('../utils/addCountryHappiness');
+const { getGdp } = require('../utils/addCountryGDP');
 const { getUnemployment } = require('../utils/addCountryUnemployment');
-const Country = require("../models/country");
+const { getCountryInfo } = require('../utils/addCountryInfoAPI');
+const Country = require('../models/country');
 
 const create = async (req, res) => {
     const new_country = new Country(req.body.name);
     let happiness = getHappiness(new_country.name);
     let gdp = getGdp(new_country.name);
-    let unemployment = getUnemployment(new_country.name)
+    let unemployment = getUnemployment(new_country.name);
     let crime_index;
     let quality_of_life;
     let health_care_index;
@@ -18,7 +18,7 @@ const create = async (req, res) => {
         quality_of_life = data[1];
         health_care_index = data[2];
         cpi_index = data[3];
-    })
+    });
     new_country.addCountryInfo(happiness, gdp, unemployment, crime_index, quality_of_life, health_care_index, cpi_index)
     if(new_country.isValid()){
         let db = req.db;

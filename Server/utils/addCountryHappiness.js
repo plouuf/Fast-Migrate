@@ -1,8 +1,9 @@
 const fs = require('fs');
-const pathHappiness = '../datasets/happiness.json'
+const path = require('path');
+const pathHappiness = '../datasets/happiness.json';
 
 const _getHappinessData = () => { 
-  const json_data = fs.readFileSync(pathHappiness);
+  const json_data = fs.readFileSync(path.resolve(__dirname, pathHappiness));
   return JSON.parse(json_data);
 }
 
@@ -15,5 +16,3 @@ module.exports.getHappiness = (country_name) => {
   }
   return null;
 }
-
-

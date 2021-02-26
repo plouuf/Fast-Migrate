@@ -1,8 +1,9 @@
 const fs = require('fs');
-const pathGdp = '../datasets/Gdp.json'
+const path = require('path');
+const pathGdp = '../datasets/Gdp.json';
 
 const _getGdpData = () => { 
-  const json_data = fs.readFileSync(pathGdp);
+  const json_data = fs.readFileSync(path.resolve(__dirname, pathGdp));
   return JSON.parse(json_data);
 }
 
