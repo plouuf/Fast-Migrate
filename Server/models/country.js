@@ -8,6 +8,16 @@ async function _get_country_collection(db) {
   }
 }
 
+// //To use in last iteration
+// async function _get_favorite_collection(db) {
+//   try {
+//     return await db.collection('favorites');
+//   } catch (err) {
+//     throw err;
+//   }
+// }
+
+
 class Country {
   constructor(name) {
     this.name = name;
