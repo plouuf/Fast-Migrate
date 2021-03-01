@@ -52,7 +52,7 @@ const updateOne = async (req, res) => {
     const name = req.params.name;
     let db = req.db;
     try{
-        let msg = await Country.update(db, name, country.happiness_score, country.Gdp, country.unemployment_rate, country.crime_index, country.quality_of_life, country.health_care, country.cost_of_living);
+        let msg = await Country.update(db, name, country.happiness_score, country.Gdp, country.unemployment_rate);
         res.send(msg);
     }catch(err){
         res.send('There was an error while updating the country information. (err:'+err+')');
