@@ -11,7 +11,7 @@ async function loadDBClient() {
 	}catch(err){
 		throw new Error('Could not connect to the Mongo DB');
 	}
-};  
+};
 
 loadDBClient();
 
@@ -27,7 +27,7 @@ app.use('/country', country_router);
 app.use('/user', user_router);
 
 app.get('/', (req, res) => {
-  res.send('Homepage :)');
+	res.send('Homepage 🔥');
 });
 
 server = app.listen(port, () => {

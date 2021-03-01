@@ -1,6 +1,5 @@
 const Validator = require('validatorjs');
 
-
 async function _get_country_collection(db) {
   try {
     return await db.collection('countries');
@@ -50,18 +49,14 @@ class Country {
 		});
 	};
 
-	static async update(db, name, happiness_score, Gdp, unemployment_rate, crime_index, quality_of_life, health_care, cost_of_living) {
+	static async update(db, name, happiness_score, Gdp, unemployment_rate) {
 		return new Promise(async function (resolve, reject) {
 			let collection = await _get_country_collection(db);
       let new_vals = {
         $set: {
           'happiness_score': happiness_score,
           'Gdp': Gdp,
-          'unemployment_rate': unemployment_rate,
-          'crime_index': crime_index,
-          'quality_of_life': quality_of_life,
-          'health_care': health_care,
-          'cost_of_living': cost_of_living
+          'unemployment_rate': unemployment_rate
         }
       };
 
