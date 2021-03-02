@@ -29,7 +29,7 @@ class Country {
     this.unemployment_rate = unemployment_rate;
     this.crime_index = crime_index;
     this.quality_of_life = quality_of_life;
-    this.health_care = health_care;
+    this.health_care_index = health_care;
     this.cost_of_living = cost_of_living;
   }
 
