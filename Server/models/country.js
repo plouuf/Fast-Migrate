@@ -36,7 +36,9 @@ class Country {
   isValid() { 
     const rules = {
       name: 'required|string',
-      happiness_score: 'required|digits_between:0,10'
+      happiness_score: 'required|digits_between:0,10',
+      Gdp: 'required',
+      unemployment_rate: 'required'
     }
 
     const validation = new Validator(this, rules);
