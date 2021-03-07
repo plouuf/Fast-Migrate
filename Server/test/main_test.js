@@ -19,7 +19,8 @@ before(async function () {
 });
 // this method will close your connection to MongoDB after the tests
 after(async function () {
-  
+  // await Country.delete(db, 'Canada');
+  // await Country.delete(db, 'Finland');
   try {
     mongo.closeDBConnection();
   } catch (err) {
@@ -253,15 +254,53 @@ describe('Testing the Fast Migrate API', function(){
           }).catch(msg => { 
             console.log(`Error: ${msg}`);
           });
-          
+
         });
     });
     describe('Testing the Book API - Complex Cases', function(){
-        it('Success 1 - POST /books, DELETE /books/:id', function(){
-
+        var myurl = 'http://localhost:3000/country'
+        it('Success 1 - POST /country, DELETE /country/name', function(){
+          let country_data = {
+            name: 'Denmark'
+          }
+          request.post({
+            headers: { 'content-type': 'application/json' },
+            url: myurl + '/',
+            body: JSON.stringify(country_data)
+          }, function (error, response, body) {
+              assert.strictEqual(body, 'Country correctly inserted in the Database!');
+              request.delete({
+                headers: { 'content-type': 'application/json' },
+                url: myurl + '/' + country_data.name
+              }, function (error, response, body) { 
+                assert.strictEqual(body, 'Country deleted!');
+              });
+          });
         });
-        it('Success 2 - POST /books, GET /books (retrieval greater than 1), DELETE /book/:id', function(){
-            
+        it('Success 2 - POST /country, GET /country (retrieval greater than 1), DELETE /country/:name', function(){
+          let country_data1 = {
+            name: 'Norway'
+          }
+          request.post({
+            headers: { 'content-type': 'application/json' },
+            url: myurl + '/',
+            body: JSON.stringify(country_data1)
+          }, function (error, response, body) {
+            assert.strictEqual(body, 'Country correctly inserted in the Database!');  
+            request.get({
+              headers: { 'content-type': 'application/json' },
+              url: myurl + '/'
+            }, function (error, response, body) {
+                let d = JSON.parse(body);
+                assert.strictEqual(d.length > 1, true);
+                request.delete({
+                  headers: { 'content-type': 'application/json' },
+                  url: myurl + '/' + country_data1.name
+                }, function (error, response, body) { 
+                    assert.strictEqual(body, 'Country deleted!');
+                });  
+            });  
+          });
         });
         it('Success 3 - POST /books, GET /books/:id, DELETE /book/:id', function(){
             

@@ -76,7 +76,7 @@ const all = async (req, res) => {
     let db = req.db;
     try{
         let obj = await Country.getCountries(db)
-        console.log(obj.length + 'book(s) were returned');
+        console.log(obj.length + ' countries were returned');
         res.send(obj);
     }catch(err){
         res.send('There was an error while retrieving all countries informations. (err:'+err+')');
