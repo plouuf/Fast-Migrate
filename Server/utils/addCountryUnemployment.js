@@ -11,7 +11,7 @@ module.exports.getUnemployment = (country_name) => {
   let data = _getGdpData();
   for (let i = 0; i < data.length; i++) {
     if (data[i].country === country_name) {
-      return data[i].unemploymentRate;
+      return parseFloat(data[i].unemploymentRate);
     }
   } 
   return null;

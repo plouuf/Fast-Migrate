@@ -11,7 +11,7 @@ module.exports.getHappiness = (country_name) => {
   let data = _getHappinessData();
   for (let i = 0; i < data.length; i++) { 
     if (data[i].Country == country_name) { 
-      return data[i].Score;
+      return parseFloat(data[i].Score);
     }
   }
   return null;
