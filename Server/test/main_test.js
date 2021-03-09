@@ -181,7 +181,7 @@ describe('Testing the Fast Migrate API', function(){
             console.log(`Error: ${msg}`);
           });
         });
-        it('Success 4 - Test the deletetion of a valid Country (Country.delete) - Success Msg test', async function(){
+        it('Success 4 - Test the deletion of a valid Country (Country.delete) - Success Msg test', async function(){
           await Country.delete(db, 'Canada')
             .then(msg => { 
               assert.strictEqual(msg, 'Country deleted!');
