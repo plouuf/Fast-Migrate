@@ -1,0 +1,30 @@
+h2 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  padding: 7px 12px;
+  justify-content: flex-start;
+}
+
+.flex-container button {
+  background-color: white;
+  float: left;
+  cursor: pointer;
+  width: 120px;
+  height: 30px;
+  padding: 4px 10px;
+  margin: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  border-color: lightskyblue;
+}
+
+.flex-container button:hover {
+  background-color: rgb(159, 200, 226);
+}
+
+#main-tab {
+  background-color: rgb(100, 95, 95);
+}
