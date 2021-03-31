@@ -1,4 +1,3 @@
-var responses = [];
 
 $(document).ready(function () {
 
@@ -11,7 +10,8 @@ $(document).ready(function () {
     }
     return array_compare;
   }
-
+  
+  let responses = [];
   
   $('#search-comp-btn').click(function (event) {
     event.preventDefault();
