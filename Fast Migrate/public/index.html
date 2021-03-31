@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fast Migrate</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-</head>
-<body>
-  <h1>Fast Migrate</h1>
-  <div id="main-tab" class="flex-container"> 
-    <nav>
-      <button id="world-map-btn" class="main-tab-links">World Map</button>
-      <button id="detail-btn" class="main-tab-links">Detail Country</button>
-      <button id="compare-btn" class="main-tab-links">Compare</button>
-    </nav>
-  </div>
+  <head>
+    <title>Fast Migrate</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <h1>Fast Migrate</h1>
+    <div id="main-tab" class="flex-container">
+      <nav>
+        <button id="world-map-btn" class="main-tab-links">World Map</button>
+        <button id="detail-btn" class="main-tab-links">Detail</button>
+        <button id="compare-btn" class="main-tab-links">Compare</button>
+      </nav>
+    </div>
 
-  <div id='map'>
+    <div id="sec-tab" class="flex-container">
+      <nav id="compare-tab" class="flex-contents">
+        <form>
+          <label for="country-1-name">Country #1:</label>
+          <input type="text" id="country-1-name" name="country-1-name" />
+          <label for="country-2-name">Country #2:</label>
+          <input type="text" id="country-2-name" name="country-2-name" />
+          <div>
+            <button id="search-comp-btn" class="sec-tab-links">Search</button>
+            <output id="search-comp-out"></output>
+          </div>
+        </form>
+      </nav>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="charts"></div>
+
+    <script src="./js/main.js"></script>
     <script src="./js/world_map.js"></script>
-  </div>
-
-  <script src="./js/main.js"></script>
-  <script src="./js/world_map.js"></script> 
-  <script src="./js/detail.js"></script>
-  <script src="./js/compare.js"></script> 
-</body>
+    <script src="./js/detail.js"></script>
+    <script src="./js/compare.js"></script>
+  </body>
 </html>

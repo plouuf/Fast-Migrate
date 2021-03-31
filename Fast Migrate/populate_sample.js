@@ -25,7 +25,7 @@ const _getData = () => {
 const populate = async () => {
   loadDBClient();
   let names = _getData();
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 5; i++) {
     let c = new Country(names[i].Country);
     let happiness = getHappiness(c.name);
     let gdp = getGdp(c.name);
