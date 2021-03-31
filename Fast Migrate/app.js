@@ -25,9 +25,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use('/country', country_router);
 
-app.get('/', (req, res) => {
-	res.send('Homepage 🔥');
-});
+
 
 server = app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
