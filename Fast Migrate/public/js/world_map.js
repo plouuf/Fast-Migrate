@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
+    var geoData;
     $("#world-map-btn").click(function(event){
         event.preventDefault();
         var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
         var map = L.map('map').setView([37.8, -96], 4);
-        var countriesData = 
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
             id: 'mapbox/light-v10',
@@ -15,10 +15,9 @@ $(document).ready(function(){
             accessToken: mapboxAccessToken
         }).addTo(map);
 
-        $.getJSON("map.geojson",function(data){
-            // L.geoJson function is used to parse geojson file and load on to map
-            L.geoJson(data).addTo(map);
-            });
+        addHappiness();
+        
+        L.geoJson(geoData, {style: style}).addTo(map);      
     })
 
     function getColor(happiness) {
@@ -29,4 +28,57 @@ $(document).ready(function(){
         happiness >= 3 ?  '#de2d26':
                           '#a50f15';
     }
+
+    function addHappiness() {
+        var countries =
+        $.ajax({
+            url: '/country/',
+            type: 'GET',
+            contentType: 'application/json',
+            global: false,
+            async: false,                        
+            success: function(response){
+                return response
+            },
+            // If there's an error, we can use the alert box to make sure we understand the problem
+            error: function(xhr, status, error){
+                var errorMessage = xhr.status + ': ' + xhr.statusText
+                alert('Error - ' + errorMessage);
+            }
+        }).responseJSON;
+
+        geoData = 
+        $.ajax({
+            dataType: "json",
+            url: "map.geojson",
+            global: false,
+            async: false,
+            success: function(data){
+                return data
+            }
+        }).responseJSON;
+
+        for(let i=0; i<countries.length; i++){
+            for(let j=0; j<geoData.features.length; j++){
+                if(countries[i].name == geoData.features[j].properties['name'])
+                {
+                    geoData.features[j].properties['happiness'] = countries[i].happiness_score;
+                    console.log(geoData.features[j].properties['name'], ': ', geoData.features[j].properties['happiness'])
+                }
+            }
+        }
+    }
+
+
+    function style(features){
+        return {
+            fillColor: getColor(features.properties.happiness),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+        };
+    }
+
 });

@@ -50,7 +50,7 @@ $(document).ready(function () {
       },
     });
     console.log("responses: ", responses) //show both responses in an array
-    console.log("1st element: ", responses[0]) //undefined 😧
+    console.log("1st element: ", responses.length) //undefined 😧
   });
 });
 
