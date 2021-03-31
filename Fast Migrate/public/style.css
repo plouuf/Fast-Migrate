@@ -29,3 +29,7 @@ h1 {
 #main-tab {
   background-color: rgb(100, 95, 95);
 }
+
+#map{
+  height: 700px;
+}
