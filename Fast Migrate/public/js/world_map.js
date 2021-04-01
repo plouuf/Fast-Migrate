@@ -1,10 +1,8 @@
 var map;
 var geoData;
 $(document).ready(function(){
-    $("#world-map-btn").click(function(event){
-        event.preventDefault();
         var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
-        map = L.map('map').setView([20, 0], 2.5);
+        map = L.map('map').setView([20, 0], 3);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
             id: 'mapbox/light-v10',
@@ -15,6 +13,9 @@ $(document).ready(function(){
             zoomOffset: -1,
             accessToken: mapboxAccessToken
         }).addTo(map);
+
+    $("#world-map-btn").click(function(event){
+        event.preventDefault();
         map.setMaxBounds([
             [83, 180],
             [-90, -180]
@@ -116,6 +117,7 @@ function showMoreDetails(name){
             alert('Error - ' + errorMessage);
         }
     }).responseJSON;
+
     section = document.getElementById('country-info');
     if(country != undefined){
         section.innerHTML = '<p>GDP: '+Math.round(country[0].Gdp*100)/100+'</p>'+
