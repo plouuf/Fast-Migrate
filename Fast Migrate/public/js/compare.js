@@ -80,9 +80,6 @@ $(document).ready(function () {
       },
     });
 
-    console.log(countryLabels);
-    console.log(countryFields);
-
     $('#bar-chart').empty();
     var barContext = $('#bar-chart');
     var barChart = new Chart(barContext, {
@@ -101,6 +98,13 @@ $(document).ready(function () {
         title: {
           display: true,
           text: `${countryLabels[0]} v/s ${countryLabels[1]}`,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
         },
         maintainAspectRatio: false,
         responsive: true,
