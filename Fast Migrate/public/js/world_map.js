@@ -1,9 +1,10 @@
+var map;
 var geoData;
 $(document).ready(function(){
     $("#world-map-btn").click(function(event){
         event.preventDefault();
         var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
-        var map = L.map('map').setView([20, 0], 2.5);
+        map = L.map('map').setView([20, 0], 2.5);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
             id: 'mapbox/light-v10',
