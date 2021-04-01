@@ -10,10 +10,15 @@ $(document).ready(function(){
             id: 'mapbox/light-v10',
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 5,
+            minZoom: 3,
             tileSize: 512,
             zoomOffset: -1,
             accessToken: mapboxAccessToken
         }).addTo(map);
+        map.setMaxBounds([
+            [83, 180],
+            [-90, -180]
+        ]);
 
         addHappiness();
         
