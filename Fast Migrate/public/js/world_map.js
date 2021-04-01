@@ -1,15 +1,14 @@
+var geoData;
 $(document).ready(function(){
-
-    var geoData;
     $("#world-map-btn").click(function(event){
         event.preventDefault();
         var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
-        var map = L.map('map').setView([37.8, -96], 4);
+        var map = L.map('map').setView([20, 0], 2.5);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
             id: 'mapbox/light-v10',
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 3,
+            maxZoom: 5,
             tileSize: 512,
             zoomOffset: -1,
             accessToken: mapboxAccessToken
@@ -20,7 +19,10 @@ $(document).ready(function(){
         L.geoJson(geoData, {
             style: style,
             onEachFeature: function(features, layer){
-                layer.bindPopup('<h2>Happiness score</h2>'+'<p>'+features.properties.name+': '+features.properties.happiness+'</p>');
+                layer.bindPopup('<h2>Happiness score</h2>'+
+                '<p style="font-size:140%;">'+features.properties.name+': '+features.properties.happiness+'</p>'+
+                '<button id = "show_more" class = "add_class_here" onClick = "showMoreDetails(\''+features.properties.name+'\')">Show More</button>'+
+                '<section id = "country-info"></section>');
             }
         }).addTo(map);
 
@@ -68,10 +70,11 @@ $(document).ready(function(){
 
         for(let i=0; i<countries.length; i++){
             for(let j=0; j<geoData.features.length; j++){
-                if(countries[i].name == geoData.features[j].properties['name'])
+                if(countries[i].name == geoData.features[j].properties['name'] 
+                || countries[i].name == geoData.features[j].properties['sovereignt'])
                 {
                     geoData.features[j].properties['happiness'] = countries[i].happiness_score;
-                    console.log(geoData.features[j].properties['name'], ': ', geoData.features[j].properties['happiness'])
+                    //console.log(geoData.features[j].properties['name'], ': ', geoData.features[j].properties['happiness'])
                 }
             }
         }
@@ -90,3 +93,36 @@ $(document).ready(function(){
     }
 
 });
+
+
+function showMoreDetails(name){
+    var country =
+    $.ajax({
+        url: '/country/'+name,
+        type: 'GET',
+        contentType: 'application/json',
+        global: false,
+        async: false,                        
+        success: function(response){
+            return response
+        },
+        // If there's an error, we can use the alert box to make sure we understand the problem
+        error: function(xhr, status, error){
+            var errorMessage = xhr.status + ': ' + xhr.statusText
+            alert('Error - ' + errorMessage);
+        }
+    }).responseJSON;
+    section = document.getElementById('country-info');
+    if(country != undefined){
+        section.innerHTML = '<p>GDP: '+Math.round(country[0].Gdp*100)/100+'</p>'+
+                            '<p>Cost of living: '+Math.round(country[0].cost_of_living*100)/100+'</p>'+
+                            '<p>Crime index: '+Math.round(country[0].crime_index*100)/100+'</p>'+
+                            '<p>Health care index: '+Math.round(country[0].health_care_index*100)/100+'</p>'+
+                            '<p>Quality of life: '+Math.round(country[0].quality_of_life*100)/100+'</p>'+
+                            '<p>Unemployment rate: '+Math.round(country[0].unemployment_rate*100)/100+'</p>'
+    }
+    else{
+        section.innerHTML = '<p>Error: Data missing</p>'
+    }   
+
+}
