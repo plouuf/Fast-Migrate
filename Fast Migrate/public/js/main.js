@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $('#sec-tab').hide();
+  $('#map').hide();
   function changeDivComponents(tab_element_clicked) {
     $('.flex-contents').each(function (index) {
       let this_id = $(this).attr('id');
@@ -14,4 +15,19 @@ $(document).ready(function () {
   $('.main-tab-links').click(function () {
     changeDivComponents($(this).text());
   });
+
+  $("#world-map-btn").click(function(event){
+    $('#map').show();
+  });
+
+
+  $("#detail-btn").click(function(event){
+    $('#map').hide();
+  });
+
+  $("#compare-btn").click(function(event){
+    $('#map').hide();
+  });
+
 });
+
