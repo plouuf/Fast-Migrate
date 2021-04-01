@@ -18,17 +18,20 @@
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""
     />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
   </head>
   <body>
     <h1>Fast Migrate</h1>
@@ -66,7 +69,7 @@
 
       <nav id="detail-tab" class="flex-contents">
         <form>
-          <label for="det-country-name">Country:</label>
+          <label for="det-country-name">Country :</label>
           <input type="text" id="det-country-name" name="det-country-name" />
           <div>
             <button id="search-det-btn" class="sec-tab-links">Search</button>
@@ -78,7 +81,13 @@
 
     <div id="map"></div>
 
-    <div id="charts"></div>
+    <div id="chart-container">
+      <div class="row-container">
+        <div class="card-container">
+            <canvas id="bar-chart"></canvas>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/main.js"></script>
     <script src="./js/world_map.js"></script>

@@ -54,6 +54,31 @@ input {
   border-color: lightskyblue;
 }
 
+#chart-container{
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  height: 98vh;
+  width: 98vw;
+  border: none;
+  align-content: center;
+  justify-content: center;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-container {
+  flex: 0 0 auto;
+  width: 40%;
+  height: 50vh;
+  border: 1px solid;
+  padding: 5%;
+}
+
 #main-tab {
   background-color: rgb(100, 95, 95);
   font-family: 'Roboto Slab', serif;
