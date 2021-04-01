@@ -2,7 +2,9 @@ h1 {
   text-align: center;
   font-family: 'Roboto Slab', serif;
 }
-
+body {
+  background-color: rgb(180, 180, 180);
+}
 input {
   display: flex;
   width: 200px;
@@ -52,6 +54,31 @@ input {
   font-family: 'Roboto Slab', serif;
   font-weight: 50;
   border-color: lightskyblue;
+}
+
+#chart-container{
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  height: 98vh;
+  width: 98vw;
+  padding: 0 0;
+  align-content: center;
+  justify-content: center;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-container {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 80vh;
+  border: none;
+  padding: none;
 }
 
 #main-tab {
