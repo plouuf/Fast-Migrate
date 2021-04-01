@@ -26,8 +26,6 @@ $(document).ready(function(){
                 '<section id = "country-info"></section>');
             }
         }).addTo(map);
-
-        
     })
 
     function getColor(happiness) {
