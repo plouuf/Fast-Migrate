@@ -44,6 +44,7 @@ const populate = async () => {
     let msg = await c.save(db);
     console.log(msg);
   }
+  console.log("All countries added to DB. Have Fun!")
   mongo.closeDBConnection();
 }
 

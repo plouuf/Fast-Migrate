@@ -22,12 +22,13 @@ input {
   background-color: white;
   float: left;
   cursor: pointer;
+  overflow: hidden;
   width: 120px;
   height: 45px;
   padding: 5px 10px;
   margin: 10px;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 17px;
   font-family: 'Roboto Slab', serif;
   font-weight: 50;
   border-color: lightskyblue;
@@ -35,6 +36,22 @@ input {
 
 .flex-container button:hover {
   background-color: rgb(159, 200, 226);
+}
+
+.dropdown {
+  background-color: white;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  width: 165px;
+  height: 45px;
+  padding: 5px 10px;
+  margin: 10px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 50;
+  border-color: lightskyblue;
 }
 
 #main-tab {
