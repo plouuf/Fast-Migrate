@@ -33,6 +33,7 @@ $(document).ready(function () {
 
   $('#search-comp-btn').click(function (event) {
     event.preventDefault();
+    $('.card-container').empty();
     let countryLabels = [];
     let countryFields = [];
     var countryColors = ['#e41a1c', '#377eb8'];
@@ -80,7 +81,8 @@ $(document).ready(function () {
       },
     });
 
-    $('#bar-chart').empty();
+    
+    $('.card-container').append('<canvas id="bar-chart"></canvas>');
     var barContext = $('#bar-chart');
     var barChart = new Chart(barContext, {
       type: 'bar',
