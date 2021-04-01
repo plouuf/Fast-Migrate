@@ -9,7 +9,7 @@ $(document).ready(function(){
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
             id: 'mapbox/light-v10',
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
+            maxZoom: 5,
             tileSize: 512,
             zoomOffset: -1,
             accessToken: mapboxAccessToken
@@ -17,7 +17,14 @@ $(document).ready(function(){
 
         addHappiness();
         
-        L.geoJson(geoData, {style: style}).addTo(map);      
+        L.geoJson(geoData, {
+            style: style,
+            onEachFeature: function(features, layer){
+                layer.bindPopup('<h2>Happiness score</h2>'+'<p>'+features.properties.name+': '+features.properties.happiness+'</p>');
+            }
+        }).addTo(map);
+
+        
     })
 
     function getColor(happiness) {
@@ -26,7 +33,8 @@ $(document).ready(function(){
         happiness >= 5 ?  '#fc9272':
         happiness >= 4 ?  '#fb6a4a':
         happiness >= 3 ?  '#de2d26':
-                          '#a50f15';
+        happiness < 3 ?   '#a50f15':
+                          '#fff'
     }
 
     function addHappiness() {
@@ -75,7 +83,7 @@ $(document).ready(function(){
             fillColor: getColor(features.properties.happiness),
             weight: 2,
             opacity: 1,
-            color: 'white',
+            color: 'gray',
             dashArray: '3',
             fillOpacity: 0.7
         };
