@@ -7,8 +7,6 @@ $(document).ready(function(){
             type: 'GET',
             contentType: 'application/json',                        
             success: function(response){
-                console.log(response);
-                console.log(response[0].Gdp)
                 $("#search-det-out").text(response.msg);
             },                   
             error: function(xhr, status, error){
