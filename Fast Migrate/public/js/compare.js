@@ -3,7 +3,9 @@ $(document).ready(function () {
   const getFieldFromRes = (response, field_name) => {
     const { name } = response;
     let country_obj = { name };
+
     switch (field_name) {
+
       case "happiness_score":
         const { happiness_score } = response;
         country_obj.happiness_score = happiness_score;
@@ -44,8 +46,6 @@ $(document).ready(function () {
 
   let res1;
   let res2;
-  var myurl = 'http://localhost:3000/country'
-
   
   $('#search-comp-btn').click(function (event) {
     event.preventDefault();
