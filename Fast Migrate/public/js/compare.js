@@ -18,14 +18,16 @@ $(document).ready(function () {
     let country_1 = $('#country-1-name').val();
     let country_2 = $('#country-2-name').val();
     // let field = $('#selected-field').val(); //to be done after
+
     $.ajax({
       url: '/country/' + country_1,
       type: 'GET',
       contentType: 'application/json',
       success: function (response1) {
         // response_1 = response1
-        responses.push(response1)
-        // console.log(response_1);
+        // responses.push(response1)
+        console.log(response1);
+        return response1;
         $('#search-comp-out').text(response1.msg);
       },
       error: function (xhr, status, error) {
@@ -40,8 +42,9 @@ $(document).ready(function () {
       contentType: 'application/json',
       success: function (response2) {
         // response_2 = response2;
-        // console.log(response_2);
-        responses.push(response2)
+        console.log(response2);
+        // responses.push(response2)
+        // return response2;
         $('#search-comp-out').text(response2.msg);
       },
       error: function (xhr, status, error) {
