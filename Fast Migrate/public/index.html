@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    
+
     <script
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -65,6 +65,13 @@
             <output id="search-comp-out"></output>
           </div>
         </form>
+        <div id="chart-container">
+          <div class="row-container">
+            <div class="card-container">
+                <canvas id="bar-chart"></canvas>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <nav id="detail-tab" class="flex-contents">
@@ -81,13 +88,13 @@
 
     <div id="map"></div>
 
-    <div id="chart-container">
+    <!-- <div id="chart-container">
       <div class="row-container">
         <div class="card-container">
             <canvas id="bar-chart"></canvas>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/main.js"></script>
     <script src="./js/world_map.js"></script>
