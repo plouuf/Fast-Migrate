@@ -124,7 +124,7 @@ input {
 
 .text-typing {
   display: none;
-  padding:20px 30px;
+  padding-left: 40%;
   font-size:30px;
   font-family:monospace;
   width: 6in;
