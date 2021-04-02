@@ -11,7 +11,6 @@ $(document).ready(function(){
         minZoom: 3,
         tileSize: 512,
         zoomOffset: -1,
-        // maxBounds: bounds,
         maxBoundsViscosity: 1.0,
         accessToken: mapboxAccessToken
     }).addTo(map);
