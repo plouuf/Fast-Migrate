@@ -4,6 +4,7 @@ const { getUnemployment } = require('../utils/addCountryUnemployment');
 const { getCountryInfo } = require('../utils/addCountryInfoAPI');
 const Country = require('../models/country');
 
+//function that creates a new country and adds to the database
 const create = async (req, res) => {
     const new_country = new Country(req.body.name);
     let happiness = getHappiness(new_country.name);
@@ -13,6 +14,7 @@ const create = async (req, res) => {
     let quality_of_life;
     let health_care_index;
     let cpi_index;
+    //returns an array with values for crime index, quality of life, health care index, cpi index
     await getCountryInfo(new_country.name).then(data => {
         crime_index = data[0];
         quality_of_life = data[1];
@@ -35,6 +37,7 @@ const create = async (req, res) => {
     }
 }
 
+//function that retrieves a country by name
 const getOne = async (req, res) => {
     const country_name = req.params.name;
     let db = req.db;
@@ -47,6 +50,7 @@ const getOne = async (req, res) => {
     }
 }
 
+//function that updates a country's information with the provided name
 const updateOne = async (req, res) => {
     const country = req.body;
     const name = req.params.name;
@@ -60,6 +64,7 @@ const updateOne = async (req, res) => {
     }
 }
 
+//function that deletes a country by name
 const deleteOne = async (req, res) => {
     const name = req.params.name;
     let db = req.db;
@@ -72,6 +77,7 @@ const deleteOne = async (req, res) => {
     }
 }
 
+//function that returns the information of all countries
 const all = async (req, res) => {
     let db = req.db;
     try{
@@ -84,6 +90,7 @@ const all = async (req, res) => {
     }
 }
 
+//makes all functions usable
 module.exports = {
     create,
     getOne,
