@@ -1,9 +1,11 @@
-var map;
-var geoData;
+var map;        //global variable that holds the map if needed to be used by other js files
+var geoData;    //global variable that holds the geoJSON file that contains the country borders information
 $(document).ready(function(){
     var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
-    map = L.map('map').setView([20, 0], 3);
+    //setting the defualt veiw of the map to the point (20,0) and zoom 3
+    map = L.map('map').setView([20, 0], 3); 
 
+    //creating the map
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
         id: 'mapbox/light-v10',
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -15,32 +17,41 @@ $(document).ready(function(){
         accessToken: mapboxAccessToken
     }).addTo(map);
 
+    //creating the legend and adding to the map
     var legend = L.control({position: 'bottomleft'});
 
-        legend.onAdd = function(map) {
-            var div = L.DomUtil.create('div','info legend'),
-                hap = [2,3,4,5,6,7],
-                labels = [];
+    legend.onAdd = function(map) {
+        var div = L.DomUtil.create('div','info legend'),    //div: html element, info legend: class name
+            hap = [2,3,4,5,6,7],
+            labels = [];
 
-            div.innerHTML = '<h3>Happiness Legend</h3>'
-            for (var i = 0; i < hap.length; i++) {
-                div.innerHTML +=
-                    '<i style="background:' + getColor(hap[i]) + '"></i> ' +
-                    hap[i] + (hap[i + 1] ? '&ndash;' + hap[i + 1] + '<br>' : '+');
-            }
-            return div;
+        div.innerHTML = '<h3>Happiness Legend</h3>'
+        //setting the colors of each happiness interval and adding it to div
+        for (var i = 0; i < hap.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + getColor(hap[i]) + '"></i> ' +
+                hap[i] + (hap[i + 1] ? '&ndash;' + hap[i + 1] + '<br>' : '+');
         }
-        legend.addTo(map);
+        return div;
+    }
+    legend.addTo(map);
 
+    
     $("#world-map-btn").click(function(event){
         event.preventDefault();
+        //sets maximum bounds of the map so that users can leave the view of the map
+        //by panning to far away. This bounces the user back to the map when tried to leave
         map.setMaxBounds([
             [90, 177.5],
             [-90, -180]
         ]);
 
+        //adds the happiness values to the geoJSON (more details below)
         addHappiness();
         
+        //adds the colours of each country depending on the happiness level and a popup feature 
+        //on each country that when clicked will show the happiness value and a button for 
+        //extra information about the country
         L.geoJson(geoData, {
             style: style,
             onEachFeature: function(features, layer){
@@ -53,6 +64,7 @@ $(document).ready(function(){
 
     })
 
+    //returns the color of the country depening on its happiness value
     function getColor(happiness) {
         return happiness >= 7 ?  '#fee5d9':
         happiness >= 6 ?  '#fcbba1':
@@ -63,7 +75,10 @@ $(document).ready(function(){
                           '#fff'
     }
 
+    //adds the happiness value of each country from the database to the geoJSON to easily
+    //access the happiness values when each country is being colored on the map
     function addHappiness() {
+        //stores the response from the ajax call to get data of all the countries to be used later
         var countries =
         $.ajax({
             url: '/country/',
@@ -81,6 +96,7 @@ $(document).ready(function(){
             }
         }).responseJSON;
 
+        //stores the response from the ajax call for the geoJSON to be used later
         geoData = 
         $.ajax({
             dataType: "json",
@@ -92,6 +108,8 @@ $(document).ready(function(){
             }
         }).responseJSON;
 
+        //loops through every country and adds the happiness score to the geoJSON if the country
+        //exists in the countries variable
         for(let i=0; i<countries.length; i++){
             for(let j=0; j<geoData.features.length; j++){
                 if(countries[i].name == geoData.features[j].properties['name'] 
@@ -105,6 +123,7 @@ $(document).ready(function(){
     }
 
 
+    //this function returns the style for each country on the map depending on their happiness value
     function style(features){
         return {
             fillColor: getColor(features.properties.happiness),
@@ -118,8 +137,10 @@ $(document).ready(function(){
 
 });
 
-
+//this function is called when the show more button on the popup of a country is pressed
+//to display more details of that country in the same popup
 function showMoreDetails(name){
+    //GET call to the database for the country information
     var country =
     $.ajax({
         url: '/country/'+name,
@@ -137,6 +158,8 @@ function showMoreDetails(name){
         }
     }).responseJSON;
 
+    //edits the html element to display the extra country information. if information
+    //is missing then displays error
     section = document.getElementById('country-info');
     if(country != undefined){
         section.innerHTML = '<p>GDP: '+Math.round(country[0].Gdp*100)/100+'</p>'+
