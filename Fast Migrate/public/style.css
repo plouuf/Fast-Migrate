@@ -104,14 +104,13 @@ input {
 }
 
 .main-tab-style {
-  display: inline-flex;
+  display: inline;
   align-items: baseline;
 }
 
 #main-tab {
   background-color: rgb(100, 95, 95);
   font-family: 'Roboto Slab', serif;
-  height: 100px;
 }
 
 #sec-tab {
