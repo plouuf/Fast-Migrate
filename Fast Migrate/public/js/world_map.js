@@ -11,10 +11,26 @@ $(document).ready(function(){
         minZoom: 3,
         tileSize: 512,
         zoomOffset: -1,
-        // maxBounds: bounds,
         maxBoundsViscosity: 1.0,
         accessToken: mapboxAccessToken
     }).addTo(map);
+
+    var legend = L.control({position: 'bottomleft'});
+
+        legend.onAdd = function(map) {
+            var div = L.DomUtil.create('div','info legend'),
+                hap = [2,3,4,5,6,7],
+                labels = [];
+
+            div.innerHTML = '<h3>Happiness Legend</h3>'
+            for (var i = 0; i < hap.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getColor(hap[i]) + '"></i> ' +
+                    hap[i] + (hap[i + 1] ? '&ndash;' + hap[i + 1] + '<br>' : '+');
+            }
+            return div;
+        }
+        legend.addTo(map);
 
     $("#world-map-btn").click(function(event){
         event.preventDefault();
@@ -34,6 +50,7 @@ $(document).ready(function(){
                 '<section id = "country-info"></section>');
             }
         }).addTo(map);
+
     })
 
     function getColor(happiness) {
