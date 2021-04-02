@@ -2,6 +2,7 @@ h1, h2 {
   text-align: center;
   font-family: 'Roboto Slab', serif;
 }
+
 body {
   background-color: rgb(180, 180, 180);
 }
@@ -28,10 +29,13 @@ input {
   justify-content: flex-start;
 }
 
+#top-ten-p {
+  padding-left: 20px;
+}
 
 
 .flex-container button {
-  background-color: white;
+  background-color: whitesmoke;
   float: left;
   cursor: pointer;
   overflow: hidden;
@@ -53,11 +57,11 @@ input {
 
 .flex-contents {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 15% 42% 43%;
 }
 
 .dropdown {
-  background-color: white;
+  background-color: whitesmoke;
   float: left;
   cursor: pointer;
   overflow: hidden;
@@ -79,7 +83,8 @@ input {
   height: 98vh;
   width: 98vw;
   /* padding: 0 0; */
-  padding-left: 10%;
+  padding-left: 2%;
+  padding-right: 0%;
   padding-top: none;
   /* align-content: center;
   justify-content: center; */
@@ -89,12 +94,13 @@ input {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-right: 1%;
 }
 
 .card-container {
   flex: 0 0 auto;
-  width: 50%;
-  height: 75vh;
+  width: 42%;
+  height: 70vh;
   border: none;
   padding: none;
 }
@@ -120,6 +126,10 @@ input {
 
 #map{
   height: 700px;
+}
+
+#top-ten {
+  padding-left: none;
 }
 
 .text-typing {
