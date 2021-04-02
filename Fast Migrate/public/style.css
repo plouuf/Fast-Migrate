@@ -21,11 +21,11 @@ input {
 }
 
 .flex-container {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  /* display: flex; */
+  /* display: grid;
+  grid-template-columns: 40% 60%; */
+  display: flex;
   padding: 7px 12px;
-  /* justify-content: flex-start; */
+  justify-content: flex-start;
 }
 
 
@@ -53,7 +53,7 @@ input {
 
 .flex-contents {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 25% 75%;
 }
 
 .dropdown {
@@ -79,7 +79,7 @@ input {
   height: 98vh;
   width: 98vw;
   /* padding: 0 0; */
-  padding-left: 50%;
+  padding-left: 10%;
   padding-top: none;
   /* align-content: center;
   justify-content: center; */
