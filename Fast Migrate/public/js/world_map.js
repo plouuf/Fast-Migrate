@@ -11,6 +11,8 @@ $(document).ready(function(){
         minZoom: 3,
         tileSize: 512,
         zoomOffset: -1,
+        // maxBounds: bounds,
+        maxBoundsViscosity: 1.0,
         accessToken: mapboxAccessToken
     }).addTo(map);
 
@@ -28,7 +30,7 @@ $(document).ready(function(){
             onEachFeature: function(features, layer){
                 layer.bindPopup('<h2>'+features.properties.name+'</h2>'+
                 '<p style="font-size:140%;">Happiness Score: '+features.properties.happiness+'</p>'+
-                '<button id = "show_more" class = "add_class_here" onClick = "showMoreDetails(\''+features.properties.name+'\')">Show More Scores</button>'+
+                '<button id = "show_more" class = "show-more-style" onClick = "showMoreDetails(\''+features.properties.name+'\')">Show More</button>'+
                 '<section id = "country-info"></section>');
             }
         }).addTo(map);
