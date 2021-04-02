@@ -1,3 +1,10 @@
+//This script adds the main behavior of the tabs.
+
+/* 
+ * Each time a tab is clicked, the one that was clicked is identified,
+ * call show to this one, and hide to the others.
+ */
+
 $(document).ready(function () {
   $('#sec-tab').hide();
   $('#map').hide();
@@ -16,10 +23,13 @@ $(document).ready(function () {
     changeDivComponents($(this).text());
   });
 
+  /* The following allows the world map to be shown 
+   * only if the world map button is clicked, else it is hidden
+   */
+
   $("#world-map-btn").click(function(event){
     $('#map').show();
   });
-
 
   $("#detail-btn").click(function(event){
     $('#map').hide();
@@ -30,4 +40,3 @@ $(document).ready(function () {
   });
 
 });
-
