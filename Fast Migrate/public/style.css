@@ -3,6 +3,13 @@ h1, h2 {
   font-family: 'Roboto Slab', serif;
 }
 
+h1 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
 body {
   background-color: rgb(180, 180, 180);
 }
@@ -125,7 +132,7 @@ input {
 }
 
 #map{
-  height: 700px;
+  height: 500px;
 }
 
 #top-ten {
