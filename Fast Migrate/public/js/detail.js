@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+    /**
+     * This function binds an event to the search button (under 'detail').
+     */
     $("#search-det-btn").click(function(event){
         event.preventDefault();
         var country_name = $("#det-country-name").val();
@@ -15,6 +19,7 @@ $(document).ready(function(){
             global: false,
 
             success: function(response){
+                //The following store the fields of the country from the user input to an array
                 country.push(response[0].name);
                 country.push(response[0].happiness_score);
                 country.push(response[0].quality_of_life);
@@ -26,12 +31,14 @@ $(document).ready(function(){
                 $("#search-det-out").text(response.msg);
             },                   
 
+            //Alert box to show if there's an error in the server-side
             error: function(xhr, status, error){
                 var errorMessage = xhr.status + ': ' + xhr.statusText
                 alert('Error - ' + errorMessage);
             }
         });
 
+        //Auxiliary function to handle fields which are missing in the database
         const fixedDeci = (country_field) => {
             if(country_field == null || country_field == undefined) {
                 return "Missing data";
@@ -41,6 +48,7 @@ $(document).ready(function(){
             }
         }
 
+        //Edits the html element to display the information of the country
         $(".text-typing").show();
         $(".text-typing").empty();
         $(".text-typing").append(`<p>${country[0]}</p>`);
@@ -51,7 +59,6 @@ $(document).ready(function(){
         $(".text-typing").append(`<p>Health Care: ${fixedDeci(country[5])}</p>`);
         $(".text-typing").append(`<p>Unemployment Rate: ${fixedDeci(country[6])}</p>`);
         $(".text-typing").append(`<p>Crime Rate: ${fixedDeci(country[7])}</p>`);
-
     });
 });
 
