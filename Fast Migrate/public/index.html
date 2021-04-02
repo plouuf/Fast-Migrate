@@ -37,34 +37,41 @@
     <h1>Fast Migrate</h1>
     <div id="main-tab" class="flex-container">
       <nav>
-        <button id="world-map-btn" class="main-tab-links">World Map</button>
-        <button id="detail-btn" class="main-tab-links">Detail</button>
-        <button id="compare-btn" class="main-tab-links">Compare</button>
+        <div class="main-tab-style">
+          <button id="world-map-btn" class="main-tab-links">World Map</button>
+          <button id="detail-btn" class="main-tab-links">Detail</button>
+          <button id="compare-btn" class="main-tab-links">Compare</button>
+          <button id="rank-btn" class="main-tab-links">Rankings</button>
+
+        </div>
       </nav>
     </div>
 
     <div id="sec-tab" class="flex-container">
       
       <nav id="compare-tab" class="flex-contents">
-        <form>
-          <label for="country-1-name">Country #1:</label>
-          <input type="text" id="country-1-name" name="country-1-name" />
-          <label for="country-2-name">Country #2:</label>
-          <input type="text" id="country-2-name" name="country-2-name" />
-          <div>
-            <select id="criteria-select" name="criteria" class="dropdown dropdown-select">
-              <option id = "hap-select" value="happiness_score">Happiness</option>
-              <option id = "gdp-select" value="Gdp">Gdp</option>
-              <option id = "unemployment-select" value="unemployment_rate">Unemployment</option>
-              <option id = "crime-select" value="crime_index">Crime Rate</option>
-              <option id = "qol-select" value="quality_of_life">Quality of Life</option>
-              <option id = "health-select" value="health_care_index">Health Care</option>
-              <option id = "col-select" value="cost_of_living">Cost of Living</option>
-            </select>
-            <button id="search-comp-btn" class="sec-tab-links">Search</button>
-            <output id="search-comp-out"></output>
-          </div>
-        </form>
+        <div>
+          <form>
+            <label for="country-1-name">Country #1:</label>
+            <input type="text" id="country-1-name" name="country-1-name" />
+            <label for="country-2-name">Country #2:</label>
+            <input type="text" id="country-2-name" name="country-2-name" />
+            <div>
+              <select id="criteria-select" name="criteria" class="dropdown dropdown-select">
+                <option id = "hap-select" value="happiness_score">Happiness</option>
+                <option id = "gdp-select" value="Gdp">Gdp</option>
+                <option id = "unemployment-select" value="unemployment_rate">Unemployment</option>
+                <option id = "crime-select" value="crime_index">Crime Rate</option>
+                <option id = "qol-select" value="quality_of_life">Quality of Life</option>
+                <option id = "health-select" value="health_care_index">Health Care</option>
+                <option id = "col-select" value="cost_of_living">Cost of Living</option>
+              </select>
+              <button id="search-comp-btn" class="sec-tab-links">Search</button>
+              <output id="search-comp-out"></output>
+            </div>
+          </form>
+        </div>
+
         <div id="chart-container">
           <div class="row-container">
             <div class="card-container">
@@ -76,13 +83,14 @@
 
       <nav id="detail-tab" class="flex-contents">
         <form>
-          <label for="det-country-name">Country :</label>
+          <label for="det-country-name">Country:</label>
           <input type="text" id="det-country-name" name="det-country-name" />
           <div>
             <button id="search-det-btn" class="sec-tab-links">Search</button>
             <output id="search-det-out"></output>
           </div>
         </form>
+        <div class="text-typing"></div>
       </nav>
     </div>
 

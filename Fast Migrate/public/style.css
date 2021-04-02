@@ -1,10 +1,16 @@
-h1 {
+h1, h2 {
   text-align: center;
   font-family: 'Roboto Slab', serif;
 }
 body {
   background-color: rgb(180, 180, 180);
 }
+
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+
 input {
   display: flex;
   width: 200px;
@@ -15,10 +21,14 @@ input {
 }
 
 .flex-container {
+  /* display: grid;
+  grid-template-columns: 40% 60%; */
   display: flex;
   padding: 7px 12px;
   justify-content: flex-start;
 }
+
+
 
 .flex-container button {
   background-color: white;
@@ -36,8 +46,14 @@ input {
   border-color: lightskyblue;
 }
 
+
 .flex-container button:hover {
   background-color: rgb(159, 200, 226);
+}
+
+.flex-contents {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
 
 .dropdown {
@@ -45,7 +61,7 @@ input {
   float: left;
   cursor: pointer;
   overflow: hidden;
-  width: 165px;
+  width: 170px;
   height: 45px;
   padding: 5px 10px;
   margin: 10px;
@@ -62,9 +78,11 @@ input {
   flex-direction: column;
   height: 98vh;
   width: 98vw;
-  padding: 0 0;
-  align-content: center;
-  justify-content: center;
+  /* padding: 0 0; */
+  padding-left: 10%;
+  padding-top: none;
+  /* align-content: center;
+  justify-content: center; */
 }
 
 .row-container{
@@ -76,15 +94,23 @@ input {
 .card-container {
   flex: 0 0 auto;
   width: 50%;
-  height: 80vh;
+  height: 75vh;
   border: none;
   padding: none;
+}
+
+.show-more-style {
+  font-family: 'Roboto Slab', serif;
+}
+
+.main-tab-style {
+  display: inline;
+  align-items: baseline;
 }
 
 #main-tab {
   background-color: rgb(100, 95, 95);
   font-family: 'Roboto Slab', serif;
-  
 }
 
 #sec-tab {
@@ -100,10 +126,39 @@ input {
   line-height: 18px;
   color: #555;
 }
+
 .legend i {
   width: 18px;
   height: 18px;
   float: left;
   margin-right: 8px;
   opacity: 0.7;
+}
+
+.text-typing {
+  display: none;
+  padding-left: 40%;
+  font-size:30px;
+  font-family:monospace;
+  width: 6in;
+  height: 10in;
+}
+.text-typing p {
+  margin:0px;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 4s steps(22,end) forwards,
+            blink 1s;
+}
+@keyframes typing {
+  0% { width:0% }
+  100% { width:100% }
+}
+@keyframes blink {
+  0%,100% {
+    border-right:2px solid transparent;
+  }
+  50% {
+    border-right:2px solid #222;
+  }
 }
