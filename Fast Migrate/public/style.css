@@ -121,3 +121,31 @@ input {
 #map{
   height: 700px;
 }
+
+.text-typing {
+  display: none;
+  padding:20px 30px;
+  font-size:30px;
+  font-family:monospace;
+  width: 6in;
+  height: 10in;
+}
+.text-typing p {
+  margin:0px;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 4s steps(22,end) forwards,
+            blink 1s;
+}
+@keyframes typing {
+  0% { width:0% }
+  100% { width:100% }
+}
+@keyframes blink {
+  0%,100% {
+    border-right:2px solid transparent;
+  }
+  50% {
+    border-right:2px solid #222;
+  }
+}
