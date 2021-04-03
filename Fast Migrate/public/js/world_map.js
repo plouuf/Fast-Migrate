@@ -36,6 +36,10 @@ $(document).ready(function(){
     }
     legend.addTo(map);
 
+    //this variable is used to set the details of the map only the first time the world map button
+    //is pressed
+    var initialized = false;
+
     
     $("#world-map-btn").click(function(event){
         event.preventDefault();
@@ -51,16 +55,22 @@ $(document).ready(function(){
         
         //adds the colours of each country depending on the happiness level and a popup feature 
         //on each country that when clicked will show the happiness value and a button for 
-        //extra information about the country
-        L.geoJson(geoData, {
-            style: style,
-            onEachFeature: function(features, layer){
-                layer.bindPopup('<h2>'+features.properties.name+'</h2>'+
-                '<p style="font-size:140%;">Happiness Score: '+features.properties.happiness+'</p>'+
-                '<button id = "show_more" class = "show-more-style" onClick = "showMoreDetails(\''+features.properties.name+'\')">Show More</button>'+
-                '<section id = "country-info"></section>');
-            }
-        }).addTo(map);
+        //extra information about the country.
+        if(!initialized){
+            L.geoJson(geoData, {
+                style: style,
+                onEachFeature: function(features, layer){
+                    layer.bindPopup('<h2>'+features.properties.name+'</h2>'+
+                    '<p style="font-size:140%;">Happiness Score: '+features.properties.happiness+'</p>'+
+                    '<button id = "show_more" class = "show-more-style" onClick = "showMoreDetails(\''+features.properties.name+'\')">Show More</button>'+
+                    '<section id = "country-info"></section>');
+                }
+            }).addTo(map);
+            initialized = true;
+        }
+        else{
+            //do nothing
+        }
 
     })
 
