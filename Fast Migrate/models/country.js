@@ -1,5 +1,6 @@
 const Validator = require('validatorjs');
 
+//function that returns the countries collection
 async function _get_country_collection(db) {
   try {
     return await db.collection('countries');
@@ -8,21 +9,13 @@ async function _get_country_collection(db) {
   }
 }
 
-// //To use in last iteration
-// async function _get_favorite_collection(db) {
-//   try {
-//     return await db.collection('favorites');
-//   } catch (err) {
-//     throw err;
-//   }
-// }
-
 
 class Country {
   constructor(name) {
     this.name = name;
   }
   
+  //function that add country info to the object
   addCountryInfo(happiness_score, Gdp, unemployment_rate, crime_index, quality_of_life, health_care, cost_of_living) {
     this.happiness_score = happiness_score;
     this.Gdp = Gdp;
@@ -33,6 +26,8 @@ class Country {
     this.cost_of_living = cost_of_living;
   }
 
+  //function that check if a given country obj is valid based on name happiness gdp and unemployment which are the main fields
+  //the rest of the fields are added from a 3rd party api which we don't have any control on
   isValid() { 
     const rules = {
       name: 'required|string',
@@ -45,6 +40,7 @@ class Country {
     return validation.passes();
   }
 
+  //function that save a given country to the database then returns a promise
   async save(db) {
 		var country =  this;
 		return new Promise(async function (resolve, reject) {
@@ -61,6 +57,7 @@ class Country {
 		});
 	};
 
+  //function that updates a country then returns a promise
 	static async update(db, name, happiness_score, Gdp, unemployment_rate) {
 		return new Promise(async function (resolve, reject) {
 			let collection = await _get_country_collection(db);
@@ -85,6 +82,7 @@ class Country {
 		});
 	};
 
+  //function that delete a country from the db then returns a promise
 	static async delete(db, name) {
     var country_delete = name;
 		return new Promise(async function (resolve, reject){
@@ -102,7 +100,8 @@ class Country {
 			});
 		});
 	};
-	
+  
+  //function that return a promise of a country obj by the given parameter name
 	static async getCountryByName(db, name) {
     var name_get = name;
 		return new Promise(async function (resolve, reject){
@@ -120,6 +119,7 @@ class Country {
     });
 	};
 
+  //function that returns a promise of all the countries in the db
 	static async getCountries(db) {
 		return new Promise(async function (resolve, reject){
 			let collection = await _get_country_collection(db);
