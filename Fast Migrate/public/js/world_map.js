@@ -1,6 +1,6 @@
 var map;        //global variable that holds the map if needed to be used by other js files
 var geoData;    //global variable that holds the geoJSON file that contains the country borders information
-$(document).ready(function(){
+$(document).ready(function () {
     var mapboxAccessToken = 'pk.eyJ1IjoibW9lODYyMiIsImEiOiJja213cHpyOHkwMTA2MnNxa21oZmd4OXhoIn0.l4J9JjgPki3EWyCjX1T7fw';
     //setting the defualt veiw of the map to the point (20,0) and zoom 3
     map = L.map('map').setView([20, 0], 3); 
@@ -39,6 +39,7 @@ $(document).ready(function(){
     
     $("#world-map-btn").click(function(event){
         event.preventDefault();
+
         //sets maximum bounds of the map so that users can leave the view of the map
         //by panning to far away. This bounces the user back to the map when tried to leave
         map.setMaxBounds([
